@@ -1,53 +1,18 @@
 # Catcode
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+An interactive game for students who are new to coding.
 
-## Prerequisites
+## The User should be able to:
 
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* See a 'start' screen.
+* Press 'play' to initiate the game.
+* See a 'game' screen.
+* See the 'cat' character.
+* See instructions.
+* See the text box where they will write their code.
+* Write code inside of the text box.
+* Get a notification that the code is 'right' or 'wrong'.
+* See the cat move depending on the code that is written.
+* Move to the next 'level' in the game.
+* Get a notification when the game ends.
 
