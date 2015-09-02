@@ -1,4 +1,4 @@
-# Catcode
+# CatCode
 
 An interactive game for students who are new to coding.
 

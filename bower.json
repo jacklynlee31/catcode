@@ -11,6 +11,11 @@
     "ember-resolver": "~0.1.18",
     "jquery": "^1.11.3",
     "loader.js": "ember-cli/loader.js#3.2.1",
-    "qunit": "~1.18.0"
+    "qunit": "~1.18.0",
+    "reset-scss": "*",
+    "neat": "~1.7.2",
+    "codemirror": "~4.8.0",
+    "ember-cli-codemirror-shim": "~0.0.1",
+    "bourbon": "4.2.3"
   }
 }
