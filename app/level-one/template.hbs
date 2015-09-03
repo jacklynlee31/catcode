@@ -6,9 +6,10 @@
     <div class="editor">
         {{ivy-codemirror value=myCode theme="rubyblue" lineNumbers=true mode="javascript"}}
     </div>
-    <div class="submit"><button>Submit</button></div>
+    <button class="submit" {{action 'testCode' myCode}}>Submit</button>
 </div>
 
-(test code)
+{{model.x}}
+{{model.y}}
 
 {{outlet}}

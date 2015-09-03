@@ -26,27 +26,35 @@ var Cat = Ember.Object.extend({
 export default Ember.Route.extend({
   appName:'Ember Twiddle',
 
-  resetCat: Ember.on('init', function() {
-    this.set('cat', Cat.create());
-  }),
+  model() {
+    return this.newCat()
+  },
+
+  newCat() {
+    return Cat.create();
+  },
+
+  resetCat() {
+    this.controller.set('cat', this.newCat());
+  },
 
   runTests() {
-    return this.get('cat.x') === 4 &&
-      this.get('cat.y') === 4;
+    return this.controller.get('model.x') === 4 &&
+      this.controller.get('model.y') === 4;
   },
 
   actions: {
     testCode(input) {
-      var cat = this.get('cat');
+      var cat = this.controller.get('model');
       eval(input);
 
       if (!this.runTests()) {
         alert('ya broke it');
-        this.resetCat();
+        // this.resetCat();
       } else {
         alert('YAY!!!');
         // Here you would move to the next screen
-        this.resetCat();
+        // this.resetCat();
       }
     }
   }
