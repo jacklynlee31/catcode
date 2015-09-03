@@ -1,6 +1,10 @@
 <div class="all">
     <div class="level-one">
-        <h1>Level One.</h1>
+        <div class="links">
+            <a href="#" class="mainpage">Back to Main Page</a>
+            <a href="#" class="logout">Logout</a>
+        </div>
+        <h1>Level One</h1>
         <div class="instruction">
             Instructions go here.
         </div>
@@ -10,10 +14,16 @@
         <button class="submit" {{action 'testCode' myCode}}>Submit</button>
     </div>
 
-    <div class="cat">
+    <div class="cat" style="left:{{cat.x}}px; bottom:{{cat.y}}px">
         <img src="catwalk.png" alt="cat walk">
-        {{model.x}}
-        {{model.y}}
+        {{!-- {{cat.x}}
+        {{cat.y}} --}}
+    </div>
+    <div class="bird">
+        <img src="bird.png" alt="bird">
+    </div>
+    <div class="four-step">
+        <img src="four-step.png" alt="four step">
     </div>
 </div>
 

@@ -38,7 +38,7 @@ body {
 .start button {
     background-color: white;
     border: 2px solid #1A3551;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 2em;
 }
@@ -46,8 +46,50 @@ body {
     color: black;
 }
 
+// LOGIN
+
+.login-screen {
+    color: white;
+    text-align: center;
+}
+.login-screen img {
+    height: 100px;
+}
+.login-screen .all {
+    padding-bottom: 3em;
+}
+.login-screen input {
+    border: 1px solid #1A3551;
+}
+.login-screen button {
+    background-color: white;
+    border: 2px solid #1A3551;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 // LEVEL ONE
 
+.links {
+    text-align: right;
+    color: white;
+}
+.links a {
+    text-decoration: none;
+}
+.mainpage:hover {
+    color: #0F1A29;
+}
+.logout:hover {
+    color: #0F1A29;
+}
+.mainpage {
+    color: white;
+}
+.logout {
+    display: block;
+    color: white;
+}
 .level-one {
     text-align: center;
     color: white;
@@ -70,13 +112,22 @@ body {
 .cat {
     margin-top: 2em;
     padding-left: 5em;
+    display: inline-block;
+    position: relative;
 }
 .cat img {
     height: 150px;
 }
-
-
-
+.bird {
+    display: inline;
+}
+.bird img {
+    height: 100px;
+    margin-left: 26em;
+}
+.four-step img {
+    margin-left: 18em;
+}
 
 
 

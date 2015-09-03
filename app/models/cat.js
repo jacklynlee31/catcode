@@ -1,11 +1,24 @@
-import DS from 'ember-data';
 import Ember from 'ember';
 
-export default DS.Model.extend({
-  name: DS.attr('string'),
-  hunger: DS.attr('number'),
+export default Ember.Object.extend({
+  friends: [],
   x: 0,
-  y: 2,
+  y: 0,
+
+  moveRight(val = 1) {
+    this.incrementProperty('x', val);
+  },
+
+  moveLeft(val = 1) {
+    this.incrementProperty('x', -val);
+  },
+
+  // moveLeft(val = 1) {
+  //   this.incrementProperty('x', -val);
+  // },
+
   // image: 'catwalk.png'
   // url: "http"
 });
+
+// make regular object
