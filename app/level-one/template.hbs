@@ -1,15 +1,20 @@
-<div class="level-one">
-    <h1>Level One.</h1>
-    <div class="instruction">
-        Instructions go here.
+<div class="all">
+    <div class="level-one">
+        <h1>Level One.</h1>
+        <div class="instruction">
+            Instructions go here.
+        </div>
+        <div class="editor">
+            {{ivy-codemirror value=myCode theme="rubyblue" lineNumbers=true mode="javascript"}}
+        </div>
+        <button class="submit" {{action 'testCode' myCode}}>Submit</button>
     </div>
-    <div class="editor">
-        {{ivy-codemirror value=myCode theme="rubyblue" lineNumbers=true mode="javascript"}}
-    </div>
-    <button class="submit" {{action 'testCode' myCode}}>Submit</button>
-</div>
 
-{{model.x}}
-{{model.y}}
+    <div class="cat">
+        <img src="catwalk.png" alt="cat walk">
+        {{model.x}}
+        {{model.y}}
+    </div>
+</div>
 
 {{outlet}}
