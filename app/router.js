@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('level-two');
   this.route('login');
   this.route('levels');
+  this.route('signup');
 });
 
 export default Router;

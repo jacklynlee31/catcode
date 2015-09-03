@@ -34,6 +34,7 @@ body {
 }
 .start {
     padding-top: 2em;
+    color: white;
 }
 .start button {
     background-color: white;
@@ -46,26 +47,55 @@ body {
     color: black;
 }
 
-// LOGIN
+// LOGIN && SIGNUP
 
-.login-screen {
+.screen {
     color: white;
     text-align: center;
 }
-.login-screen img {
-    height: 100px;
-}
-.login-screen .all {
+// .login-screen, .signup-screen img {
+//     height: 100px;
+// }
+.screen, .all {
     padding-bottom: 3em;
 }
-.login-screen input {
+.screen img {
+    height: 150px;
+}
+.screen input {
     border: 1px solid #1A3551;
 }
-.login-screen button {
+.screen button {
     background-color: white;
     border: 2px solid #1A3551;
     font-size: 16px;
     font-weight: bold;
+}
+
+// LEVELS
+.levels {
+    text-align: center;
+    color: white;
+}
+.levels img {
+    height: 150px;
+    text-align: center;
+}
+.levels button {
+    background-color: white;
+    border: 2px solid #1A3551;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-top: 3em;
+}
+.levels a {
+    color: black;
+    text-decoration: none;
+}
+.show-levels a {
+    color: white;
 }
 
 // LEVEL ONE
@@ -119,7 +149,9 @@ body {
     height: 150px;
 }
 .bird {
-    display: inline;
+    position: absolute;
+    bottom: -140px;
+    left: 600px;
 }
 .bird img {
     height: 100px;
@@ -128,8 +160,12 @@ body {
 .four-step img {
     margin-left: 18em;
 }
+.code {
+    color: yellow;
+    font-weight: bold;
+}
 
-
+// Harold, Francis, George
 
 
 
