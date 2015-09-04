@@ -11,6 +11,7 @@ html {
 // dark blue #0F1A29
 // medium blue #1A3551
 // light blue #335C76
+// Harold, Francis, George
 
 body {
     background-color: #D8E5EE;
@@ -120,7 +121,7 @@ body {
     display: block;
     color: white;
 }
-.level-one {
+.level {
     text-align: center;
     color: white;
 }
@@ -133,7 +134,7 @@ body {
 .submit {
     margin-top: 1em;
 }
-.level-one button {
+.level button {
     font-weight: bold;
     border: 2px solid #1A3551;
     background-color: white;
@@ -165,8 +166,81 @@ body {
     font-weight: bold;
 }
 
-// Harold, Francis, George
+// LEVEL 2
+.cat2 {
+    margin-top: 2em;
+    padding-left: 5em;
+    display: inline-block;
+    position: absolute;
+    top: 41em;
+}
+.cat2 img {
+    height: 150px;
+}
+.bird2 {
+    position: absolute;
+    bottom: -100px;
+    left: 600px;
+}
+.bird2 img {
+    height: 100px;
+    margin-left: 26em;
+}
+.four-jump img {
+    margin-left: 18em;
+    padding-top: 9em;
+}
 
+// LEVEL THREE
+.cat3 {
+    margin-top: 2em;
+    padding-left: 5em;
+    display: inline-block;
+    position: absolute;
+    top: 715px;
+}
+.cat3 img {
+    height: 150px;
+}
+.bird3 {
+    position: absolute;
+    bottom: -210px;
+    left: 600px;
+}
+.bird3 img {
+    height: 100px;
+    margin-left: 26em;
+}
+.four-zzz img {
+    margin-left: 18em;
+    padding-top: 9em;
+}
 
-
-
+// END
+.end {
+    text-align: center;
+}
+.end img {
+    height: 250px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 2em;
+}
+.end h1 {
+    text-align: center;
+    color: white;
+}
+.endb2 a {
+    color: black;
+}
+.endb button {
+    font-weight: bold;
+    border: 2px solid #1A3551;
+    background-color: white;
+    font-size: 13px;
+}
+.endb {
+    font-size: 12px;
+    display: block;
+    margin: auto;
+}

@@ -1,17 +1,17 @@
 <div class="all">
-    <div class="level-one">
+    <div class="level">
         <div class="links">
             <a href="#" class="mainpage">Back to Main Page</a>
             <a href="#" class="logout">Logout</a>
         </div>
         <h1>Level 1</h1>
         <div class="instruction">
-            Help {{model.catname}} find its friends! Harold the bird is only four steps to the right of {{model.catname}}. Let's catch him using code! {{model.catname}} can move around using <span class="code">moveLeft</span> and <span class="code">moveRight</span>. So, if we wanted {{model.catname}} to move 2 spaces to the left, we would say <span class="code">cat.MoveLeft(2)</span>. Can you figure out how to catch Harold?
+            Help {{model.catname}} find its friends! Harold the bird is only four steps to the right of {{model.catname}}. Let's catch him using code! {{model.catname}} can move around using <span class="code">moveLeft</span> and <span class="code">moveRight</span>. So, if we wanted {{model.catname}} to move 2 spaces to the left, we would say <span class="code">cat.moveLeft(2)</span>. Can you figure out how to catch Harold?
         </div>
         <div class="editor">
             {{ivy-codemirror value=myCode theme="rubyblue" lineNumbers=true mode="javascript"}}
         </div>
-        <button class="submit" {{action 'testCode' myCode}}>Submit</button>
+        <button class="submit" {{action 'testCode'}}>Submit</button>
     </div>
 
     <div class="cat" style="left:{{cat.x}}px; bottom:{{cat.y}}px">

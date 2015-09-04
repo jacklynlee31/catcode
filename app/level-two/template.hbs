@@ -1,1 +1,30 @@
+<div class="all">
+    <div class="level">
+        <div class="links">
+            <a href="#" class="mainpage">Back to Main Page</a>
+            <a href="#" class="logout">Logout</a>
+        </div>
+        <h1>Level 2</h1>
+        <div class="instruction">
+            Help {{model.catname}} find its friends! Francis the bird flew up on a ledge. Let's catch him using code! You know how to move {{model.catname}} left and right. Now let's make {{model.catname}} <span class="code">jump</span>! We can jump using <span class="code">cat.jump</span>. Can you figure out how to catch Francis?
+        </div>
+        <div class="editor">
+            {{ivy-codemirror value=myCode theme="rubyblue" lineNumbers=true mode="javascript"}}
+        </div>
+        <button class="submit" {{action 'testCode' myCode}}>Submit</button>
+    </div>
+
+    <div class="cat2" style="left:{{cat.x}}px; bottom:{{cat.y}}px">
+        <img src="catwalk2.png" alt="cat walk">
+        {{!-- {{cat.x}}
+        {{cat.y}} --}}
+    </div>
+    <div class="bird2">
+        <img src="bird2.png" alt="bird">
+    </div>
+    <div class="four-jump">
+        <img src="four-jump.png" alt="four jump">
+    </div>
+</div>
+
 {{outlet}}
