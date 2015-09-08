@@ -6,12 +6,12 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin, {
 
   actions: {
     login(email, password) {
-      this.get('firebase').createUser({
+      this.get('firebase').authWithPassword({
         email,
         password,
       }, (error) => {
         if (error) {
-          console.log("Error creating user:", error);
+          window.alert("Login Failed. Please make sure your e-mail and password are correct, or Sign Up to create a new account.", error);
         } else {
           this.get('session').authenticate('authenticator:firebase', {
             email,
