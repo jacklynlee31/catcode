@@ -1,9 +1,23 @@
 <div class="screen">
     <div class="all">
         <h1>Sign Up</h1>
-        <p>Choose your username and passowrd. Don't forget to give your cat an awesome name!</p>
+        <p>Choose your username and password. Don't forget to give your cat an awesome name!</p>
         <img src="bird.png" alt="bird1">
-        <form {{action 'save' model on='submit'}}>
+
+        <form {{action 'signup' username email password on='submit'}}>
+          <label for="username">Username</label>
+          {{input value=username id='username'}}
+
+          <label for="password">Password</label>
+          {{input value=password id='password' type='password'}}
+
+          <label for="catname">Cat Name</label>
+          {{input value=catname id='catname'}}
+
+          <input type="submit" value="Signup">
+        </form>
+
+{{!--         <form {{action 'save' model on='submit'}}>
             User Name:<br>
             {{input id="username" type="text" value=model.username}}<br><br>
             Password:<br>
@@ -11,7 +25,8 @@
             Name Your Cat:<br>
             {{input id="catname" type="text" value=model.catname}}<br><br>
             <button class="submit">Sign Up</button>
-        </form>
+        </form> --}}
+
     </div>
 </div>
 

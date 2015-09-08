@@ -2,13 +2,35 @@
     <div class="all">
         <h1>Log In</h1>
         <img src="bird3.png" alt="bird3">
-        <form {{action 'save' model on='submit'}}>
+
+        <form class="container" {{action 'login' username password on='submit'}}>
+          <div class="">
+            <fieldset>
+              <legend>Login</legend>
+
+              {{input controlType="text" label="Username" placeholder="Username" value=username}}
+
+              {{input controlType="password" label="Password" placeholder="Password" value=password}}
+
+              <input class="btn btn-primary" type="submit" value="Login">
+            </fieldset>
+          </div>
+        </form>
+
+        {{#if session.isAuthenticated}}
+          <h3>Logged In User</h3>
+
+          <p><strong>Email: </strong>{{session.currentUser.email}}</p>
+          <p><strong>Username: </strong>{{session.currentUser.username}}</p>
+        {{/if}}
+
+{{!--         <form {{action 'save' model on='submit'}}>
             User Name:<br>
             {{input id="username" type="text" value=model.username}}<br><br>
             Password:<br>
             {{input id="password" type="password" value=model.password}}<br><br>
             <button class="submit">Log In</button>
-        </form>
+        </form> --}}
     </div>
 </div>
 

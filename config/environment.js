@@ -8,6 +8,11 @@ module.exports = function(environment) {
     firebase: 'https://jc-catcode.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
+    'simple-auth': {
+      session: 'session:with-user',
+      routeAfterAuthentication: 'levels',
+      routeIfAlreadyAuthenticated: 'levels',
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

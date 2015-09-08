@@ -17,6 +17,7 @@
     "codemirror": "~4.8.0",
     "ember-cli-codemirror-shim": "~0.0.1",
     "bourbon": "4.2.3",
-    "firebase": "^2.1.0"
+    "firebase": "^2.1.0",
+    "ember-simple-auth": "0.8.0"
   }
 }
