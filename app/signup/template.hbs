@@ -1,21 +1,21 @@
 <div class="screen">
     <div class="all">
         <h1>Sign Up</h1>
-        <p>Go ahead and sign up for Catcode using your e-mail. Don't forget to give your cat an awesome name!</p>
+        <p>Go ahead and sign up for Catcode using your e-mail. <br> Don't forget to give your cat an awesome name!</p>
         <img src="bird.png" alt="bird1">
 
         <form class="container" {{action 'signup' email password catname on='submit'}}>
-          <div class="">
+          <div class="l-form">
             <fieldset>
-              <legend>Sign Up</legend>
+              <p>E-Mail:</p> {{input controlType="text" label="email" placeholder="E-Mail" value=email}}
 
-              {{input controlType="text" label="email" placeholder="email" value=email}}
+              <p>Password:</p> {{input controlType="password" label="Password" placeholder="Password" value=password}}
 
-              {{input controlType="password" label="Password" placeholder="Password" value=password}}
+              <p>Name of Cat:</p> {{input controlType="catname" label="catname" placeholder="Cat Name" value=catname}}
 
-              {{input controlType="catname" label="catname" placeholder="catname" value=catname}}
-
-              <input class="btn btn-primary" type="submit" value="Sign Up">
+              <div class="l-button">
+                <input class="btn btn-primary" type="submit" value="Sign Up">
+              </div>
             </fieldset>
           </div>
         </form>

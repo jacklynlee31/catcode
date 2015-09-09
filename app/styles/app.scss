@@ -54,9 +54,17 @@ body {
     color: white;
     text-align: center;
 }
-// .login-screen, .signup-screen img {
-//     height: 100px;
-// }
+fieldset {
+    border: none;
+}
+.l-form input {
+    display: block;
+    margin: auto;
+    font-size: 14px;
+}
+.l-button {
+    margin-top: 2em;
+}
 .screen, .all {
     padding-bottom: 3em;
 }

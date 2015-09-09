@@ -4,15 +4,17 @@
         <img src="bird3.png" alt="bird3">
 
         <form class="container" {{action 'login' email password on='submit'}}>
-          <div class="">
+          <div class="l-form">
             <fieldset>
-              <legend>Login</legend>
 
-              {{input controlType="text" label="email" placeholder="E-Mail" value=email}}
+              <p>E-Mail:</p> {{input controlType="text" label="email" placeholder="E-Mail" value=email}}
 
-              {{input controlType="password" label="Password" placeholder="Password" value=password}}
+              <p>Password:</p> {{input controlType="password" label="Password" placeholder="Password" value=password}}
 
-              <input class="btn btn-primary" type="submit" value="Login">
+              <div class="l-button">
+                <input class="btn btn-primary" type="submit" value="Log In">
+              </div>
+
             </fieldset>
           </div>
         </form>
