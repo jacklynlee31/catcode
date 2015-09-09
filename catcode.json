@@ -1,0 +1,18 @@
+{
+  "cat": {
+    "name": " ",
+    "friends": " ",
+    "current level": " "
+  },
+  "level": {
+    "cat": "x: _, y: _",
+    "bird": " ",
+  },
+}
+
+// beginning & ending scenarios with multiple properties
+// level one - blocks
+// to begin, cat is y 1, x 0
+// blocks: array of blocks, each with an x & y, colors
+
+// this.level.cat = level.setup .cat

@@ -1,14 +1,34 @@
 import Ember from 'ember';
 import Cat from 'catcode/models/cat';
-
+import Bird from 'catcode/models/bird';
+import Block from 'catcode/models/block';
 
 export default Ember.Controller.extend({
   newCat() {
-    return Cat.create();
+    var cat = Cat.create(this.get('model.start.cat'));
+    debugger;
+    this.get('session.currentUser').then((user) => {
+      cat.set('name', user.get('catname'));
+    });
+    return cat;
   },
 
-  resetCat: Ember.on('init', function() {
+  newBird() {
+    var bird = Bird.create(this.get('model.start.bird'));
+    return bird;
+  },
+
+  setupBlocks() {
+    debugger;
+    return this.get('model.start.blocks').map(function(block) {
+      return  Block.create(block);
+    });
+  },
+
+  resetLevel: Ember.on('init', function() {
     this.set('cat', this.newCat());
+    this.set('bird', this.newBird());
+    this.set('blocks', this.setupBlocks());
   }),
 
   resetTick() {

@@ -1,6 +1,6 @@
 # CatCode
 
-An interactive game for students who are new to coding.
+An interactive and educational game for students who are new to coding.
 
 ## The User should be able to:
 
