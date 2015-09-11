@@ -2,11 +2,11 @@ import Ember from 'ember';
 import Cat from 'catcode/models/cat';
 import Bird from 'catcode/models/bird';
 import Block from 'catcode/models/block';
+import Game from 'catcode/models/game';
 
 export default Ember.Controller.extend({
   newCat() {
     var cat = Cat.create(this.get('model.start.cat'));
-    debugger;
     this.get('session.currentUser').then((user) => {
       cat.set('name', user.get('catname'));
     });
@@ -19,17 +19,23 @@ export default Ember.Controller.extend({
   },
 
   setupBlocks() {
-    debugger;
     return this.get('model.start.blocks').map(function(block) {
       return  Block.create(block);
     });
   },
 
-  resetLevel: Ember.on('init', function() {
-    this.set('cat', this.newCat());
-    this.set('bird', this.newBird());
-    this.set('blocks', this.setupBlocks());
-  }),
+  resetLevel: function() {
+    var cat = this.newCat();
+    var bird = this.newBird();
+    var blocks = this.setupBlocks();
+
+    var characters = {cat, bird, blocks};
+    var game = new Game(characters);
+    this.set('game', game);
+    cat.set('game', game);
+
+    this.setProperties(characters);
+  },
 
   resetTick() {
      setTimeout(() => {
