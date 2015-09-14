@@ -1,6 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Object.extend({
+  xValues: Ember.computed.mapBy('blocks', 'x'),
+  maxX: Ember.computed.max('xValues'),
+
+  yValues: Ember.computed.mapBy('blocks', 'y'),
+  maxY: Ember.computed.max('yValues'),
+
   cat: null,
   bird: null,
   blocks: [],

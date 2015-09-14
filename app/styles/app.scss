@@ -149,25 +149,24 @@ fieldset {
     font-size: 12px;
 }
 .cat {
-    margin-top: 2em;
-    padding-left: 5em;
+    padding-left: 3em;
     display: inline-block;
-    position: relative;
+    position: absolute;
 }
 .cat img {
     height: 150px;
 }
 .bird {
-    position: absolute;
-    bottom: -140px;
-    left: 600px;
+    position: relative;
+    bottom: -40px;
+    left: 450px;
 }
 .bird img {
     height: 100px;
-    margin-left: 26em;
+    margin-left: 20em;
 }
 .four-step img {
-    margin-left: 18em;
+    margin-left: 5em;
 }
 .code {
     color: yellow;
@@ -176,52 +175,51 @@ fieldset {
 
 // LEVEL 2
 .cat2 {
-    margin-top: 2em;
-    padding-left: 5em;
+    padding-left: 3em;
     display: inline-block;
-    position: absolute;
-    top: 41em;
+    position: relative;
+    top: 11em;
 }
 .cat2 img {
     height: 150px;
 }
 .bird2 {
-    position: absolute;
-    bottom: -100px;
-    left: 600px;
+    position: relative;
+    top: 40px;
+    left: 400px;
 }
 .bird2 img {
     height: 100px;
     margin-left: 26em;
 }
 .four-jump img {
-    margin-left: 18em;
-    padding-top: 9em;
+    margin-left: 5em;
+    // padding-top: 9em;
 }
 
 // LEVEL THREE
 .cat3 {
     margin-top: 2em;
-    padding-left: 5em;
+    padding-left: 4em;
     display: inline-block;
-    position: absolute;
-    top: 715px;
+    position: relative;
+    top: 180px;
+    left: -10px;
 }
 .cat3 img {
     height: 150px;
 }
 .bird3 {
-    position: absolute;
-    bottom: -210px;
-    left: 600px;
+    position: relative;
+    left: 390px;
+    top: 95px;
 }
 .bird3 img {
     height: 100px;
     margin-left: 26em;
 }
 .four-zzz img {
-    margin-left: 18em;
-    padding-top: 9em;
+    margin-left: 5em;
 }
 
 // END
@@ -251,4 +249,18 @@ fieldset {
     font-size: 12px;
     display: block;
     margin: auto;
+}
+
+.block {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 30px;
+    margin-left: 50px;
+}
+
+.game-grid {
+    width: 100%;
+    position: relative;
+    min-height: 300px;
 }

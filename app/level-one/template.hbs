@@ -14,16 +14,21 @@
         <button class="submit" {{action 'testCode'}}>Submit</button>
     </div>
 
-    <div class="cat" style="left:{{cat.x}}px; bottom:{{cat.y}}px">
-        <img src="catwalk.png" alt="cat walk">
-        {{!-- {{cat.x}}
-        {{cat.y}} --}}
-    </div>
-    <div class="bird">
-        <img src="bird.png" alt="bird">
-    </div>
-    <div class="four-step">
-        <img src="four-step.png" alt="four step">
+    <div class="game-grid">
+        <div class="cat" style="{{game-position-style cat.x cat.y game.maxX game.maxY}}">
+            <img src="catwalk.png" alt="cat walk">
+            {{!-- {{cat.x}}
+            {{cat.y}} --}}
+        </div>
+        {{#each blocks as |block|}}
+            <div class="block"  style="{{game-position-style block.x block.y game.maxX game.maxY}} background:{{block.color}}"></div>
+        {{/each}}
+        <div class="bird">
+            <img src="bird.png" alt="bird">
+        </div>
+        {{!-- <div class="four-step">
+            <img src="four-step.png" alt="four step">
+        </div> --}}
     </div>
 </div>
 

@@ -30,7 +30,8 @@ export default Ember.Controller.extend({
     var blocks = this.setupBlocks();
 
     var characters = {cat, bird, blocks};
-    var game = new Game(characters);
+    var game = new Game();
+    game.setProperties(characters);
     this.set('game', game);
     cat.set('game', game);
 
