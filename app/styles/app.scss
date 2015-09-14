@@ -251,12 +251,16 @@ fieldset {
     margin: auto;
 }
 
-.block {
+//
+
+.grid-item {
     position: absolute;
     content: '';
-    width: 150px;
-    height: 30px;
-    margin-left: 50px;
+}
+
+.block {
+    width: 100%;
+    height: 100%;
 }
 
 .game-grid {

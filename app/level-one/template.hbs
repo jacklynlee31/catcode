@@ -21,7 +21,9 @@
             {{cat.y}} --}}
         </div>
         {{#each blocks as |block|}}
-            <div class="block"  style="{{game-position-style block.x block.y game.maxX game.maxY}} background:{{block.color}}"></div>
+            <div class="grid-item"  style="{{game-position-style block.x block.y game.maxX game.maxY}} {{height-style game.maxX game.maxY}}">
+                <div class="block" style="background:{{block.color}}"></div>
+            </div>
         {{/each}}
         <div class="bird">
             <img src="bird.png" alt="bird">
