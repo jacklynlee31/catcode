@@ -57,9 +57,9 @@ export default Ember.Controller.extend({
       if (!this.runTests()) {
         this.resetLevel();
       } else {
-        this.flashMessage('success', 'Content Saved');
+        this.flashMessage('You won!');
 
-        this.transitionToRoute('level-two');
+        this.transitionTo('2');
       }
     }
   },

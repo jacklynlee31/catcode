@@ -28,12 +28,31 @@ export default Ember.Object.extend({
     }
   },
 
-  // moveLeft(val = 1) {
-  //   this.incrementProperty('x', -val);
+  jumpUp(val = 1) {
+    if (val) {
+      this._moveTo(this.get('x') + 1, this.get('y') + 1);
+      this.jumpUp(val - 1);
+    }
+  },
+  jumpDown(val = 1) {
+    if (val) {
+      this._moveTo(this.get('x') + 1, this.get('y') - 1);
+      this.jumpDown(val - 1);
+    }
+  },
+  //   meow(val = 1) {
+  //   if (val) {
+  //     this._moveTo(this.get('x') - 1, this.get('y'));
+  //     this.meow(val - 1);
+  //   }
   // },
-
-  // image: 'catwalk.png'
-  // url: "http"
 });
 
-// make regular object
+
+
+
+
+
+
+
+

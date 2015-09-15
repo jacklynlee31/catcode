@@ -6,13 +6,14 @@ export default Ember.Route.extend({
       case '3': {
         return this.store.createRecord('level', {
           start: {
-            cat: {x: 0, y: 1, img: 'catwalk2.png'},
-            bird: {x: 4, y: 2, img: 'bird2.png'},
+            cat: {x: 0, y: 1, img: 'catwalk3.png'},
+            bird: {x: 4, y: 2, img: 'bird3.png'},
             blocks: [
               {x: 0, y: 0, color: 'red'},
-              {x: 1, y: 1, color: 'orange'},
+              {x: 1, y: 0, color: 'orange'},
+              {x: 2, y: 1, color: 'yellow'},
               {x: 2, y: 0, color: 'yellow'},
-              {x: 3, y: 1, color: 'green'},
+              {x: 3, y: 0, color: 'green'},
               {x: 4, y: 0, color: 'blue'},
               {x: 4, y: 1, color: 'blue'},
             ]
