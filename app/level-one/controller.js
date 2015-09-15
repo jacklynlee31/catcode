@@ -3,6 +3,7 @@ import Cat from 'catcode/models/cat';
 import Bird from 'catcode/models/bird';
 import Block from 'catcode/models/block';
 import Game from 'catcode/models/game';
+import _ from 'lodash/lodash';
 
 export default Ember.Controller.extend({
   newCat() {
@@ -54,27 +55,33 @@ export default Ember.Controller.extend({
       console.log('tick');
     } else {
       if (!this.runTests()) {
-        console.log('ya broke it');
-        // this.resetCat();
+        this.resetLevel();
       } else {
-        console.log('YAY!!!');
+        alert('YAY!!!');
+        this.transitionToRoute('level-two');
         // Here you would move to the next screen
         // this.resetCat();
+        // transition to with controllers instead of routes
       }
     }
   },
 
   computeStatements() {
     this.statements = this.get('myCode').split(/[;/n]+/);
-    // clearInterval(this.interval);
-    // this.tick(this.get('now').add({hours: 1, }))
-    // x.split(/[;/n]+/)
-    // wherever there is a semicolon & new line
   },
 
   runTests() {
-    return this.get('cat.x') === 4;
+    var endScenario = this.get('model.end');
+
+    var testCat = this.get('cat').getProperties('x', 'y');
+    var testBird = this.get('bird').getProperties('x', 'y');
+
+    return _.isEqual(testCat, endScenario.cat) && _.isEqual(testBird, endScenario.bird);
   },
+
+  // level path : level/id
+  // if (params.id == 1)
+  // return level 1 scenario
 
   actions: {
     testCode() {

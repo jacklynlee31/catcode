@@ -15,18 +15,18 @@
     </div>
 
     <div class="game-grid">
-        <div class="cat" style="{{game-position-style cat.x cat.y game.maxX game.maxY}}">
-            <img src="catwalk.png" alt="cat walk">
+        <div class="grid-item" style="{{game-position-style cat.x cat.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
+            <img class="cat" src="catwalk.png" alt="cat walk">
             {{!-- {{cat.x}}
             {{cat.y}} --}}
         </div>
         {{#each blocks as |block|}}
-            <div class="grid-item"  style="{{game-position-style block.x block.y game.maxX game.maxY}} {{height-style game.maxX game.maxY}}">
+            <div class="grid-item"  style="{{game-position-style block.x block.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
                 <div class="block" style="background:{{block.color}}"></div>
             </div>
         {{/each}}
-        <div class="bird">
-            <img src="bird.png" alt="bird">
+        <div class="grid-item"  style="{{game-position-style bird.x bird.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
+            <img class="bird" src="bird.png" alt="bird">
         </div>
         {{!-- <div class="four-step">
             <img src="four-step.png" alt="four step">

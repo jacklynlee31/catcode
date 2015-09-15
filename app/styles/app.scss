@@ -149,21 +149,16 @@ fieldset {
     font-size: 12px;
 }
 .cat {
-    padding-left: 3em;
-    display: inline-block;
     position: absolute;
+    width: 100%;
+    bottom: 0;
 }
-.cat img {
-    height: 150px;
-}
+
 .bird {
-    position: relative;
-    bottom: -40px;
-    left: 450px;
-}
-.bird img {
-    height: 100px;
-    margin-left: 20em;
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    margin-left: 150px;
 }
 .four-step img {
     margin-left: 5em;

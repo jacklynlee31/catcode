@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Object.extend({
   friends: [],
+  name: '',
   game: null,
   x: 0,
   y: 0,
@@ -11,8 +12,6 @@ export default Ember.Object.extend({
       this.set('x', x);
       this.set('y', y);
     }
-
-    console.log('can\'t move');
   },
 
   moveRight(val = 1) {
