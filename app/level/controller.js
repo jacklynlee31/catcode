@@ -57,11 +57,9 @@ export default Ember.Controller.extend({
       if (!this.runTests()) {
         this.resetLevel();
       } else {
-        alert('YAY!!!');
+        this.flashMessage('success', 'Content Saved');
+
         this.transitionToRoute('level-two');
-        // Here you would move to the next screen
-        // this.resetCat();
-        // transition to with controllers instead of routes
       }
     }
   },
@@ -78,10 +76,6 @@ export default Ember.Controller.extend({
 
     return _.isEqual(testCat, endScenario.cat) && _.isEqual(testBird, endScenario.bird);
   },
-
-  // level path : level/id
-  // if (params.id == 1)
-  // return level 1 scenario
 
   actions: {
     testCode() {
