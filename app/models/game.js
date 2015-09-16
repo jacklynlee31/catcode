@@ -29,8 +29,6 @@ export default Ember.Object.extend({
       return prev;
     }, null);
 
-    // return 'cat' 'bird' 'block'
   },
 });
 
-// make regular object

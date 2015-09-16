@@ -55,11 +55,12 @@ export default Ember.Controller.extend({
       console.log('tick');
     } else {
       if (!this.runTests()) {
+        alert("Try again!");
         this.resetLevel();
       } else {
-        this.flashMessage('You won!');
+        alert('You won!');
 
-        this.transitionTo('2');
+        this.transitionToRoute('level', this.get('model.level') + 1);
       }
     }
   },

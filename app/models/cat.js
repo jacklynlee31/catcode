@@ -29,14 +29,26 @@ export default Ember.Object.extend({
 
   jumpUp(val = 1) {
     if (val) {
-      this._moveTo(this.get('x') + 1, this.get('y') + 1);
-      this.jumpUp(val - 1);
+      if (
+        this.game.findByCoords(this.get('x') + 1, this.get('y')) === 'block' &&
+        this.game.findByCoords(this.get('x'), this.get('y') + 1) !== 'block' &&
+        this.game.findByCoords(this.get('x') + 1, this.get('y') + 1) !== 'block') {
+          this.set('x', this.get('x') + 1);
+          this.set('y', this.get('y') + 1);
+          this.jumpUp(val - 1);
+      }
     }
   },
   jumpDown(val = 1) {
     if (val) {
-      this._moveTo(this.get('x') + 1, this.get('y') - 1);
-      this.jumpDown(val - 1);
+      if (
+        this.game.findByCoords(this.get('x'), this.get('y') - 1) === 'block' &&
+        this.game.findByCoords(this.get('x') + 1, this.get('y')) !== 'block' &&
+        this.game.findByCoords(this.get('x') + 1, this.get('y') - 1) !== 'block') {
+          this.set('x', this.get('x') + 1);
+          this.set('y', this.get('y') - 1);
+          this.jumpDown(val - 1);
+      }
     }
   },
   //   meow(val = 1) {
@@ -46,12 +58,3 @@ export default Ember.Object.extend({
   //   }
   // },
 });
-
-
-
-
-
-
-
-
-

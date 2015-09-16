@@ -4,10 +4,10 @@
             <a href="#" class="mainpage">Back to Main Page</a>
             <a href="#" class="logout" {{ action 'invalidateSession' }}>Logout</a>
         </div>
-        <h1>Level 1</h1>
+        <h1>Level {{model.level}}</h1>
         <div class="instruction">
+        {{{model.desc}}}
         {{!-- REMEMBER SEMICOLONS --}}
-            Help {{model.catname}} find its friends! Harold the bird is only four steps to the right of {{model.catname}}. Let's catch him using code! {{model.catname}} can move around using <span class="code">moveLeft</span> and <span class="code">moveRight</span>. So, if we wanted {{model.catname}} to move 2 spaces to the left, we would say <span class="code">cat.moveLeft(2)</span>. Can you figure out how to catch Harold?
         </div>
         <div class="editor">
             {{ivy-codemirror value=myCode theme="rubyblue" lineNumbers=true mode="javascript"}}
