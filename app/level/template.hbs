@@ -18,8 +18,6 @@
     <div class="game-grid">
         <div class="grid-item" style="{{game-position-style cat.x cat.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
             <img class="cat" src="{{cat.img}}" alt="cat">
-            {{!-- {{cat.x}}
-            {{cat.y}} --}}
         </div>
         {{#each blocks as |block|}}
             <div class="grid-item"  style="{{game-position-style block.x block.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
@@ -29,9 +27,6 @@
         <div class="grid-item"  style="{{game-position-style bird.x bird.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
             <img class="bird" src="{{bird.img}}" alt="bird">
         </div>
-        {{!-- <div class="four-step">
-            <img src="four-step.png" alt="four step">
-        </div> --}}
     </div>
 </div>
 

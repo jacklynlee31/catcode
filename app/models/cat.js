@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Object.extend({
   friends: [],
-  name: '',
   game: null,
   x: 0,
   y: 0,

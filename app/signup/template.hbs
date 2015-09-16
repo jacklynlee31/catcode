@@ -1,16 +1,12 @@
 <div class="screen">
     <div class="all">
         <h1>Sign Up</h1>
-        <p>Go ahead and sign up for Catcode using your e-mail. <br> Don't forget to give your cat an awesome name!</p>
-
         <form class="container" {{action 'signup' email password catname on='submit'}}>
           <div class="l-form">
             <fieldset>
               <p>E-Mail:</p> {{input controlType="text" label="email" placeholder="E-Mail" value=email}}
 
-              <p>Password:</p> {{input controlType="password" label="Password" placeholder="Password" value=password}}
-
-              <p>Name of Cat:</p> {{input controlType="catname" label="catname" placeholder="Cat Name" value=catname}}
+              <p>Password:</p> {{input controlType="password" label="Password" type="password" placeholder="Password" value=password}}
 
               <div class="l-button">
                 <input class="btn btn-primary" type="submit" value="Sign Up">
@@ -18,30 +14,6 @@
             </fieldset>
           </div>
         </form>
-
-{{!--         <form {{action 'signup' username email password on='submit'}}>
-          <label for="username">Username</label>
-          {{input value=username id='username'}}
-
-          <label for="password">Password</label>
-          {{input value=password id='password' type='password'}}
-
-          <label for="catname">Cat Name</label>
-          {{input value=catname id='catname'}}
-
-          <input type="submit" value="Signup">
-        </form> --}}
-
-{{!--         <form {{action 'save' model on='submit'}}>
-            User Name:<br>
-            {{input id="username" type="text" value=model.username}}<br><br>
-            Password:<br>
-            {{input id="password" type="password" value=model.password}}<br><br>
-            Name Your Cat:<br>
-            {{input id="catname" type="text" value=model.catname}}<br><br>
-            <button class="submit">Sign Up</button>
-        </form> --}}
-
     </div>
 </div>
 
