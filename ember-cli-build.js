@@ -4,10 +4,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     fingerprint: {
-      exclude: [
-      'catsit.png']
+      enabled: false,
     },
-      codemirror: {
+    codemirror: {
       modes: ['javascript'],
       keyMaps: ['sublime'],
       themes: ['rubyblue']

@@ -42,8 +42,8 @@ export default Ember.Object.extend({
   jumpDown(val = 1) {
     if (val) {
       if (
-        this.game.findByCoords(this.get('x'), this.get('y') - 1) === 'block' &&
-        this.game.findByCoords(this.get('x') + 1, this.get('y')) !== 'block' &&
+        this.game.findByCoords(this.get('x'), this.get('y') - 1 ) === 'block' &&
+        this.game.findByCoords(this.get('x') + 1, this.get('y') ) !== 'block' &&
         this.game.findByCoords(this.get('x') + 1, this.get('y') - 1) !== 'block') {
           this.set('x', this.get('x') + 1);
           this.set('y', this.get('y') - 1);
