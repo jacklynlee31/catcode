@@ -60,13 +60,12 @@ export default Ember.Controller.extend({
         //   content: 'Remember to double-check your code!',
         //   duration: 300,
         // });
-        this.notify.alert('This is a thing.');
-        // alert("Try again!");
+        // this.notify.alert('This is a thing.');
+        alert("Try again!");
         this.resetLevel();
       } else {
-        this.flashMessage('Good Job!', 'Let&#39;s go to the next level!');
-        // alert('You won!');
-
+        // this.flashMessage('Good Job!', 'Let&#39;s go to the next level!');
+        alert('You won!');
         this.transitionToRoute('level', this.get('model.level') + 1);
       }
     }
