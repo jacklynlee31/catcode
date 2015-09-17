@@ -82,6 +82,10 @@ fieldset {
 }
 
 // LEVELS
+
+.CodeMirror {
+    height: 150px;
+}
 .levels {
     text-align: center;
     color: white;
@@ -110,7 +114,7 @@ h2 a:hover {
     color: #0F1A29;
 }
 
-// LEVEL ONE
+// LEVEL
 
 .links {
     text-align: right;
@@ -250,8 +254,6 @@ h2 a:hover {
     margin: auto;
 }
 
-//
-
 .grid-item {
     position: absolute;
     content: '';
@@ -267,15 +269,3 @@ h2 a:hover {
     position: relative;
     min-height: 300px;
 }
-
-// .flash-message-queue {
-//     color: yellow;
-//     position: static;
-//     left: 400px;
-//     top: 1000px;
-//     background-color: #335C76;
-//     line-height: 2em;
-//     width: 400px;
-//     margin: auto;
-//     text-align: center;
-// }

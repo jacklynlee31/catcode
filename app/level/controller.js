@@ -49,27 +49,31 @@ export default Ember.Controller.extend({
     if (this.statements.length) {
       var currentStatement = this.statements.shift();
       var cat = this.get('cat');
-      eval(currentStatement);
+      try {
+        eval(currentStatement);
+      }
+      catch (e) {
+        alert("You have a syntax error! Check your spelling, make sure the right words are capitalized and remember to end each line with a semicolon.");
+      }
 
       this.resetTick();
       console.log('tick');
     } else {
       if (!this.runTests()) {
-        // this.flashMessage({
-        //   type: 'Try Again!',
-        //   content: 'Remember to double-check your code!',
-        //   duration: 300,
-        // });
-        // this.notify.alert('This is a thing.');
         alert("Try again!");
         this.resetLevel();
       } else {
-        // this.flashMessage('Good Job!', 'Let&#39;s go to the next level!');
         alert('You won!');
         this.transitionToRoute('level', this.get('model.level') + 1);
       }
     }
   },
+
+  // } else {
+  //   if (this.get('model.level') > 3) {
+  //     this.transitionToRoute('end')
+  //   }
+  // }
 
   computeStatements() {
     this.statements = this.get('myCode').split(/[;\n]+/);
