@@ -64,16 +64,15 @@ export default Ember.Controller.extend({
         this.resetLevel();
       } else {
         alert('You won!');
-        this.transitionToRoute('level', this.get('model.level') + 1);
+
+        if (this.get('model.levelNum') === 3) {
+          return this.transitionToRoute('end');
+        }
+        this.set('myCode', '');
+        this.transitionToRoute('level', parseInt(this.get('model.levelNum')) + 1);
       }
     }
   },
-
-  // } else {
-  //   if (this.get('model.level') > 3) {
-  //     this.transitionToRoute('end')
-  //   }
-  // }
 
   computeStatements() {
     this.statements = this.get('myCode').split(/[;\n]+/);
