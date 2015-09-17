@@ -4,8 +4,23 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'catcode',
     environment: environment,
+    firebase: 'https://jc-catcode.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
+    'simple-auth': {
+      session: 'session:with-user',
+      routeAfterAuthentication: 'levels',
+      routeIfAlreadyAuthenticated: 'levels',
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self' https://fonts.gstatic.com",
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      'media-src': "'self'"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

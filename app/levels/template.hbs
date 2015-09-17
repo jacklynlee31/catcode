@@ -1,0 +1,15 @@
+<div class="levels">
+    <div class="all">
+        <h1>Cat Code</h1>
+        <div class="show-levels">
+            <h2>{{#link-to 'level' 1}}Level 1{{/link-to}}</h2>
+            <h2>{{#link-to 'level' 2}}Level 2{{/link-to}}</h2>
+            <h2>{{#link-to 'level' 3}}Level 3{{/link-to}}</h2>
+        </div>
+        <button>{{#link-to 'index'}}Back to Main Screen{{/link-to}}</button>
+
+        <button {{ action 'invalidateSession' }}>Log Out</button>
+    </div>
+</div>
+
+{{outlet}}

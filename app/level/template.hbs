@@ -1,0 +1,33 @@
+<div class="all">
+    <div class="level">
+        <div class="links">
+            <a href="#" class="mainpage">Back to Main Page</a>
+            <a href="#" class="logout" {{ action 'invalidateSession' }}>Logout</a>
+        </div>
+        <h1>{{model.level}}</h1>
+        <div class="instruction">
+        {{{model.desc}}}
+        {{!-- REMEMBER SEMICOLONS --}}
+        </div>
+        <div class="editor">
+            {{ivy-codemirror value=myCode theme="rubyblue" lineNumbers=true mode="javascript"}}
+        </div>
+        <button class="submit" {{action 'testCode'}}>Submit</button>
+    </div>
+    {{!-- {{flash-message-queue}} --}}
+        <div class="game-grid">
+        <div class="grid-item" style="{{game-position-style cat.x cat.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
+            <img class="cat" src="{{cat.img}}" alt="cat">
+        </div>
+        {{#each blocks as |block|}}
+            <div class="grid-item"  style="{{game-position-style block.x block.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
+                <div class="block" style="background:{{block.color}}"></div>
+            </div>
+        {{/each}}
+        <div class="grid-item"  style="{{game-position-style bird.x bird.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
+            <img class="bird" src="{{bird.img}}" alt="bird">
+        </div>
+    </div>
+</div>
+
+{{outlet}}

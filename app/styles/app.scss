@@ -1,4 +1,5 @@
 @import "bourbon";
+@import "neat";
 html {
   box-sizing: border-box;
 }
@@ -7,33 +8,137 @@ html {
   font-family: 'Droid Sans Mono', ;
   text-decoration: none;
 }
+// dark blue #0F1A29
+// medium blue #1A3551
+// light blue #335C76
+// Harold, Francis, George
+
+body {
+    background-color: #D8E5EE;
+}
+.all {
+    @include outer-container(1000px);
+    margin-top: 3em;
+    background-color: #335C76;
+    border: 4px solid #1A3551;
+    padding: 1em;
+}
 .start-screen {
-    //
+    text-align: center;
 }
 .start-screen h1 {
-    //
+    color: white;
 }
 .start-screen img {
-    height: 150px;
+    height: 200px;
     padding-top: 2em;
 }
 .start {
     padding-top: 2em;
+    color: white;
 }
 .start button {
     background-color: white;
-    border: 2px solid black;
-    font-size: 12px;
+    border: 2px solid #1A3551;
+    font-size: 16px;
     font-weight: bold;
+    margin-bottom: 2em;
 }
 .start a {
     color: black;
 }
 
-// LEVEL ONE
+// LOGIN && SIGNUP
 
-.level-one {
+.screen {
+    color: white;
     text-align: center;
+}
+fieldset {
+    border: none;
+}
+.l-form input {
+    display: block;
+    margin: auto;
+    font-size: 14px;
+}
+.l-button {
+    margin-top: 2em;
+}
+.screen, .all {
+    padding-bottom: 3em;
+}
+.screen img {
+    height: 150px;
+}
+.screen input {
+    border: 1px solid #1A3551;
+}
+.screen button {
+    background-color: white;
+    border: 2px solid #1A3551;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+// LEVELS
+
+.CodeMirror {
+    height: 150px;
+}
+.levels {
+    text-align: center;
+    color: white;
+}
+.levels img {
+    height: 150px;
+    text-align: center;
+}
+.levels button {
+    background-color: white;
+    border: 2px solid #1A3551;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-top: 3em;
+}
+.levels a {
+    color: black;
+    text-decoration: none;
+}
+.show-levels a {
+    color: white;
+}
+h2 a:hover {
+    color: #0F1A29;
+}
+
+// LEVEL
+
+.links {
+    text-align: right;
+    color: white;
+}
+.links a {
+    text-decoration: none;
+}
+.mainpage:hover {
+    color: #0F1A29;
+}
+.logout:hover {
+    color: #0F1A29;
+}
+.mainpage {
+    color: white;
+}
+.logout {
+    display: block;
+    color: white;
+}
+.level {
+    text-align: center;
+    color: white;
 }
 .editor {
     text-align: left;
@@ -42,22 +147,125 @@ html {
     padding-top: 1em;
 }
 .submit {
-    padding-top: 1em;
+    margin-top: 1em;
+    margin-bottom: 9em;
 }
-.level-one button {
+.level button {
     font-weight: bold;
-    border: 2px solid black;
+    border: 2px solid #1A3551;
     background-color: white;
     font-size: 12px;
 }
+.cat {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
 
+.bird {
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    margin-left: 145px;
+}
+.four-step img {
+    margin-left: 5em;
+}
+.code {
+    color: yellow;
+    font-weight: bold;
+}
 
+// LEVEL 2
+.cat2 {
+    padding-left: 3em;
+    display: inline-block;
+    position: relative;
+    top: 11em;
+}
+.cat2 img {
+    height: 150px;
+}
+.bird2 {
+    position: relative;
+    top: 40px;
+    left: 400px;
+}
+.bird2 img {
+    height: 100px;
+    margin-left: 26em;
+}
+.four-jump img {
+    margin-left: 5em;
+    // padding-top: 9em;
+}
 
+// LEVEL THREE
+.cat3 {
+    margin-top: 2em;
+    padding-left: 4em;
+    display: inline-block;
+    position: relative;
+    top: 180px;
+    left: -10px;
+}
+.cat3 img {
+    height: 150px;
+}
+.bird3 {
+    position: relative;
+    left: 390px;
+    top: 95px;
+}
+.bird3 img {
+    height: 100px;
+    margin-left: 26em;
+}
+.four-zzz img {
+    margin-left: 5em;
+}
 
+// END
+.end {
+    text-align: center;
+}
+.end img {
+    height: 250px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 2em;
+}
+.end h1 {
+    text-align: center;
+    color: white;
+}
+.endb2 a {
+    color: black;
+}
+.endb button {
+    font-weight: bold;
+    border: 2px solid #1A3551;
+    background-color: white;
+    font-size: 13px;
+}
+.endb {
+    font-size: 12px;
+    display: block;
+    margin: auto;
+}
 
+.grid-item {
+    position: absolute;
+    content: '';
+}
 
+.block {
+    width: 100%;
+    height: 100%;
+}
 
-
-
-
-
+.game-grid {
+    width: 100%;
+    position: relative;
+    min-height: 300px;
+}

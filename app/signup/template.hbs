@@ -1,0 +1,20 @@
+<div class="screen">
+    <div class="all">
+        <h1>Sign Up</h1>
+        <form class="container" {{action 'signup' email password catname on='submit'}}>
+          <div class="l-form">
+            <fieldset>
+              <p>E-Mail:</p> {{input controlType="text" label="email" placeholder="E-Mail" value=email}}
+
+              <p>Password:</p> {{input controlType="password" label="Password" type="password" placeholder="Password" value=password}}
+
+              <div class="l-button">
+                <input class="btn btn-primary" type="submit" value="Sign Up">
+              </div>
+            </fieldset>
+          </div>
+        </form>
+    </div>
+</div>
+
+{{outlet}}

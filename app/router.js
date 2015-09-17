@@ -6,8 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('level-one');
-  this.route('level-two');
+  this.route('level', {path: 'level/:level'});
+  this.route('levels');
+  this.route('login');
+  this.route('signup');
+  this.route('end');
 });
 
 export default Router;
