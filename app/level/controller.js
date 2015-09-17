@@ -55,10 +55,17 @@ export default Ember.Controller.extend({
       console.log('tick');
     } else {
       if (!this.runTests()) {
-        alert("Try again!");
+        // this.flashMessage({
+        //   type: 'Try Again!',
+        //   content: 'Remember to double-check your code!',
+        //   duration: 300,
+        // });
+        this.notify.alert('This is a thing.');
+        // alert("Try again!");
         this.resetLevel();
       } else {
-        alert('You won!');
+        this.flashMessage('Good Job!', 'Let&#39;s go to the next level!');
+        // alert('You won!');
 
         this.transitionToRoute('level', this.get('model.level') + 1);
       }
@@ -66,7 +73,7 @@ export default Ember.Controller.extend({
   },
 
   computeStatements() {
-    this.statements = this.get('myCode').split(/[;/n]+/);
+    this.statements = this.get('myCode').split(/[;\n]+/);
   },
 
   runTests() {

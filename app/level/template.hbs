@@ -14,8 +14,8 @@
         </div>
         <button class="submit" {{action 'testCode'}}>Submit</button>
     </div>
-
-    <div class="game-grid">
+    {{!-- {{flash-message-queue}} --}}
+        <div class="game-grid">
         <div class="grid-item" style="{{game-position-style cat.x cat.y game.maxX game.maxY}} {{size-style game.maxX game.maxY}}">
             <img class="cat" src="{{cat.img}}" alt="cat">
         </div>

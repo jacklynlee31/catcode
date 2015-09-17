@@ -39,6 +39,7 @@ export default Ember.Object.extend({
       }
     }
   },
+
   jumpDown(val = 1) {
     if (val) {
       if (
